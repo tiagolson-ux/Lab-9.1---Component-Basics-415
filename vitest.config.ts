@@ -1,8 +1,7 @@
 import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 
-// Note to self: This tells Vitest to run tests in a browser-like environment (jsdom)
-// and to run a setup file before every test.
+// Note to self: Vitest needs jsdom to test React components like a browser.
 export default defineConfig({
   plugins: [react()],
   test: {
@@ -10,3 +9,4 @@ export default defineConfig({
     setupFiles: "./src/test/setup.ts",
   },
 });
+
